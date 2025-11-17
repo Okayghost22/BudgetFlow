@@ -3,7 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { TrendingUp, Target, Wallet, AlertCircle } from 'lucide-react';
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, Legend } from 'recharts';
-import AddTransaction from './Addtransaction';
+import AddTransaction from "./AddTransaction";
 
 export default function PersonalDashboard({ 
   userProfile, 

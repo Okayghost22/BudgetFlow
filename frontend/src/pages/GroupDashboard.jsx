@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { Users, TrendingUp, MessageSquare, Activity, Trash2, AlertCircle } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer, LineChart, Line } from 'recharts';
 import { useNavigate } from 'react-router-dom';
-import AddTransaction from './Addtransaction';
+import AddTransaction from "./AddTransaction";
 import MemberManagement from '../components/MemberManagement';
 import { deleteGroup } from '../api/groups';
 
