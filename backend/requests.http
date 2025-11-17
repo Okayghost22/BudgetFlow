@@ -1,0 +1,85 @@
+### Register User
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "Test User",
+  "email": "testuser@example.com",
+  "password": "securePassword"
+}
+
+###
+# Login User
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "testuser@example.com",
+  "password": "securePassword"
+}
+
+###
+# Get Transactions
+GET http://localhost:5000/api/transactions
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTEyMTczNzZkMDRjOTE0NjkyNTgyNDUiLCJpYXQiOjE3NjI3OTQ0NTUsImV4cCI6MTc2MzM5OTI1NX0.z0LF8HOW3mI23SIVAJJKo6d9r7SfTWsTGUs2meDgmSQ
+
+###
+# Add Transaction
+POST http://localhost:5000/api/transactions
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTEyMTczNzZkMDRjOTE0NjkyNTgyNDUiLCJpYXQiOjE3NjI3OTQ0NTUsImV4cCI6MTc2MzM5OTI1NX0.z0LF8HOW3mI23SIVAJJKo6d9r7SfTWsTGUs2meDgmSQ
+Content-Type: application/json
+
+{
+  "amount": 1200,
+  "type": "expense",
+  "category": "Food",
+  "description": "Lunch",
+  "date": "2025-11-10"
+}
+
+###
+# Update Transaction
+PUT http://localhost:5000/api/transactions/69121c2cf9da74d011f9a3cf
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTEyMTczNzZkMDRjOTE0NjkyNTgyNDUiLCJpYXQiOjE3NjI3OTQ0NTUsImV4cCI6MTc2MzM5OTI1NX0.z0LF8HOW3mI23SIVAJJKo6d9r7SfTWsTGUs2meDgmSQ
+Content-Type: application/json
+
+{
+  "amount": 2000,
+  "type": "expense",
+  "category": "Food",
+  "description": "Dinner",
+  "date": "2025-11-10"
+}
+
+###
+# Delete Transaction
+DELETE http://localhost:5000/api/transactions/69121c2cf9da74d011f9a3cf
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTEyMTczNzZkMDRjOTE0NjkyNTgyNDUiLCJpYXQiOjE3NjI3OTQ0NTUsImV4cCI6MTc2MzM5OTI1NX0.z0LF8HOW3mI23SIVAJJKo6d9r7SfTWsTGUs2meDgmSQ
+
+### Get Budgets
+GET http://localhost:5000/api/budgets
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTEyMTczNzZkMDRjOTE0NjkyNTgyNDUiLCJpYXQiOjE3NjI3OTQ0NTUsImV4cCI6MTc2MzM5OTI1NX0.z0LF8HOW3mI23SIVAJJKo6d9r7SfTWsTGUs2meDgmSQ
+
+### Add Budget
+POST http://localhost:5000/api/budgets
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTEyMTczNzZkMDRjOTE0NjkyNTgyNDUiLCJpYXQiOjE3NjI3OTQ0NTUsImV4cCI6MTc2MzM5OTI1NX0.z0LF8HOW3mI23SIVAJJKo6d9r7SfTWsTGUs2meDgmSQ
+Content-Type: application/json
+
+{
+  "category": "Food",
+  "limit": 5000
+}
+
+### Update Budget
+PUT http://localhost:5000/api/budgets/69121fb8fb249d59157f1723
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTEyMTczNzZkMDRjOTE0NjkyNTgyNDUiLCJpYXQiOjE3NjI3OTQ0NTUsImV4cCI6MTc2MzM5OTI1NX0.z0LF8HOW3mI23SIVAJJKo6d9r7SfTWsTGUs2meDgmSQ
+Content-Type: application/json
+
+{
+  "category": "Food",
+  "limit": 6000
+}
+
+### Delete Budget
+DELETE http://localhost:5000/api/budgets/69121fb8fb249d59157f1723
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTEyMTczNzZkMDRjOTE0NjkyNTgyNDUiLCJpYXQiOjE3NjI3OTQ0NTUsImV4cCI6MTc2MzM5OTI1NX0.z0LF8HOW3mI23SIVAJJKo6d9r7SfTWsTGUs2meDgmSQ
